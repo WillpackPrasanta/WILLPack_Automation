@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WILLPACK Automation - Innovative Labeling Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
             --primary: #005BAA;
@@ -12,33 +13,34 @@
             --accent: #FF6B00;
             --text: #333333;
             --light-gray: #F5F5F5;
+            --dark-blue: #003366;
         }
-
+       
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+       
         body {
             font-family: 'Open Sans', sans-serif;
             color: var(--text);
             line-height: 1.6;
-            min-height: 100vh;
+            overflow-x: hidden;
         }
-
+       
         h1, h2, h3, h4 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
         }
-
+       
         .container {
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
+       
         /* Header Styles */
         header {
             background-color: var(--secondary);
@@ -47,14 +49,14 @@
             width: 100%;
             z-index: 1000;
         }
-
+       
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
         }
-
+       
         .logo {
             font-size: 24px;
             font-weight: 700;
@@ -63,7 +65,7 @@
             align-items: center;
             gap: 10px;
         }
-
+       
         .logo img {
             width: 60px;
             height: 60px;
@@ -71,7 +73,7 @@
             object-fit: cover;
             animation: pulse 2s infinite;
         }
-
+       
         @keyframes pulse {
             0% {
                 transform: scale(1);
@@ -86,27 +88,27 @@
                 box-shadow: 0 0 0 0 rgba(0, 91, 170, 0);
             }
         }
-
+       
         .nav-links {
             display: flex;
             list-style: none;
         }
-
+       
         .nav-links li {
             margin-left: 30px;
         }
-
+       
         .nav-links a {
             text-decoration: none;
             color: var(--text);
             font-weight: 500;
             transition: color 0.3s;
         }
-
+       
         .nav-links a:hover {
             color: var(--primary);
         }
-
+       
         .cta-button {
             background-color: var(--accent);
             color: white;
@@ -116,188 +118,359 @@
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s;
         }
-
+       
         .cta-button:hover {
             background-color: #e05d00;
             transform: scale(1.05);
         }
-
+       
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('machine-background.jpg');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/Screenshot%202025-08-15%20234316.png');
             background-size: cover;
             background-position: center;
-            min-height: 100vh;
+            height: 50vh; /* Reduced by 50% */
             display: flex;
             align-items: center;
             text-align: center;
             color: white;
             padding-top: 80px;
         }
-
+       
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
-
+       
         .hero h1 {
-            font-size: 48px;
+            font-size: 52px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+       
+        .hero p.subtitle {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .company-name {
+            display: block;
+            font-size: 28px;
+            color: var(--accent);
             margin-bottom: 20px;
+            font-weight: 700;
         }
-
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
-
+       
         .hero-buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
+            margin-top: 40px;
         }
-
+       
         /* Why Choose Us Section */
         .why-choose {
-            padding: 80px 0;
+            padding: 100px 0;
             background-color: var(--light-gray);
-            min-height: 100vh;
         }
-
+       
         .section-title {
             text-align: center;
             margin-bottom: 50px;
         }
-
+       
         .section-title h2 {
             font-size: 36px;
             color: var(--primary);
+            position: relative;
+            display: inline-block;
         }
-
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+       
         .features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
-
+       
         .feature-card {
             background-color: var(--secondary);
-            padding: 30px;
+            padding: 40px 30px;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-icon {
-            font-size: 40px;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .feature-card h3 {
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-
-        /* Products Preview */
-        .products-preview {
-            padding: 80px 0;
-            min-height: 100vh;
-            position: relative;
-        }
-
-        .product-slider-container {
+            transition: transform 0.3s, box-shadow 0.3s;
             position: relative;
             overflow: hidden;
         }
-
+       
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: var(--accent);
+        }
+       
+        .feature-icon {
+            font-size: 50px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+       
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 22px;
+        }
+        
+        .feature-card p {
+            font-size: 16px;
+        }
+        
+        /* Products Preview */
+        .products-preview {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .slider-container {
+            position: relative;
+        }
+        
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s;
+            border: none;
+            font-size: 20px;
+        }
+        
+        .slider-arrow:hover {
+            background-color: var(--accent);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .arrow-left {
+            left: -25px;
+        }
+        
+        .arrow-right {
+            right: -25px;
+        }
+       
         .product-slider {
             display: flex;
             overflow-x: auto;
             gap: 30px;
-            padding: 20px 0;
+            padding: 30px 10px;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
         }
-
+        
+        .product-slider::-webkit-scrollbar {
+            display: none;
+        }
+       
         .product-card {
-            min-width: 300px;
+            min-width: 350px;
             background-color: var(--secondary);
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             scroll-snap-align: start;
+            transition: transform 0.3s;
+            flex: 0 0 auto;
         }
-
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+       
         .product-image {
-            height: 200px;
+            height: 250px;
+            background-color: #ddd;
             background-size: cover;
             background-position: center;
         }
-
+       
         .product-info {
-            padding: 20px;
+            padding: 25px;
         }
-
+       
         .product-info h3 {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 20px;
+        }
+       
+        .product-info ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            list-style-type: none;
+        }
+        
+        .product-info ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .product-info ul li:before {
+            content: '✓';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Photo Gallery */
+        .photo-gallery {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Experts Section */
+        .experts {
+            padding: 100px 0;
+            background-color: white; /* Changed to white */
+            color: var(--text);
+        }
+        
+        .experts .section-title h2 {
             color: var(--primary);
         }
-
-        .product-info ul {
-            margin-bottom: 15px;
-            padding-left: 20px;
+        
+        .experts-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
         }
-
-        .slider-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
+        
+        .expert-card {
+            background-color: var(--light-gray);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
         }
-
-        .slider-nav button {
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 24px;
+        
+        .expert-card:hover {
+            transform: translateY(-10px);
+            background-color: var(--secondary);
+        }
+        
+        .expert-photo {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            transition: background-color 0.3s;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid var(--accent);
         }
-
-        .slider-nav button:hover {
+        
+        .expert-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .expert-position {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .experience-badge {
+            display: inline-block;
             background-color: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 15px;
         }
-
+        
         /* Video Showcase */
         .video-showcase {
-            padding: 80px 0;
-            background-color: var(--light-gray);
-            min-height: 100vh;
+            padding: 100px 0;
         }
-
+        
         .video-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 30px;
         }
-
+        
         .video-item {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
             overflow: hidden;
             margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-
+        
         .video-item video {
             position: absolute;
             top: 0;
@@ -306,309 +479,403 @@
             height: 100%;
             border-radius: 8px;
         }
-
+        
         .video-caption {
-            margin-top: 10px;
+            margin-top: 15px;
         }
-
+        
         .video-caption h4 {
             color: var(--primary);
             margin-bottom: 5px;
+            font-size: 18px;
         }
-
+        
         .video-caption p {
             font-size: 14px;
             color: var(--text);
-        }
-
-        /* Photo Gallery */
-        .photo-gallery {
-            padding: 80px 0;
-            min-height: 100vh;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-        }
-
-        .gallery-item {
-            height: 200px;
-            overflow: hidden;
-            border-radius: 8px;
-            position: relative;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Experts Section */
-        .experts {
-            padding: 80px 0;
-            background-color: var(--light-gray);
-            min-height: 100vh;
-        }
-
-        .experts-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-
-        .expert-card {
-            background-color: var(--secondary);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        .expert-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 20px;
-            border: 3px solid var(--primary);
-        }
-
-        .expert-card h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .expert-position {
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
 
         /* Industries */
         .industries {
-            padding: 80px 0;
-            min-height: 100vh;
+            padding: 100px 0;
+            background-color: var(--light-gray);
         }
-
+       
         .industry-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
         }
-
+       
         .industry-card {
             background-color: var(--secondary);
-            padding: 30px;
+            padding: 40px 20px;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             text-align: center;
+            transition: transform 0.3s;
         }
-
+       
+        .industry-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+       
         .industry-icon {
-            font-size: 40px;
+            font-size: 50px;
             color: var(--primary);
             margin-bottom: 20px;
         }
-
+       
+        .industry-card h3 {
+            font-size: 20px;
+        }
+        
+        /* AI Section */
+        .ai-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #003366 0%, #005BAA 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .ai-section .section-title h2 {
+            color: white;
+        }
+        
+        .ai-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .ai-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
         /* Contact */
         .contact {
-            padding: 80px 0;
-            background-color: var(--light-gray);
-            min-height: 100vh;
+            padding: 100px 0;
         }
-
+       
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
         }
-
+       
         .contact-info h3 {
             margin-bottom: 20px;
             color: var(--primary);
+            font-size: 24px;
         }
-
+       
         .contact-details {
             margin-bottom: 30px;
         }
-
+       
         .contact-details p {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
+            font-size: 16px;
         }
-
+       
         .contact-details i {
-            margin-right: 10px;
+            margin-right: 15px;
             color: var(--primary);
-        }
-
-        .sales-contact {
-            background-color: var(--secondary);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .sales-contact h3 {
-            color: var(--primary);
-            margin-bottom: 20px;
+            font-size: 20px;
+            min-width: 25px;
             text-align: center;
         }
-
+        
+        .sales-contact {
+            background-color: var(--secondary);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .sales-contact h3 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 24px;
+        }
+        
         .sales-person {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
-
+        
         .sales-photo {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 20px;
-            border: 2px solid var(--accent);
+            margin-right: 25px;
+            border: 3px solid var(--accent);
         }
-
+        
         .sales-info h4 {
             color: var(--primary);
             margin-bottom: 5px;
+            font-size: 20px;
         }
-
+        
         .sales-info p {
             color: var(--text);
-            font-size: 14px;
+            font-size: 16px;
+            margin-bottom: 8px;
         }
-
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+       
         .social-links a {
-            margin-right: 15px;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .social-links a:hover {
-            color: var(--accent);
-        }
-
-        /* Footer */
-        footer {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
             background-color: var(--primary);
             color: white;
-            padding: 50px 0 20px;
-            min-height: 100vh;
+            border-radius: 50%;
+            transition: all 0.3s;
         }
-
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 70px 0 30px;
+        }
+       
         .footer-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 40px;
+            margin-bottom: 50px;
         }
-
+       
         .footer-column h3 {
-            margin-bottom: 20px;
-            font-size: 18px;
+            margin-bottom: 25px;
+            font-size: 20px;
+            position: relative;
+            padding-bottom: 10px;
         }
-
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+       
         .footer-column ul {
             list-style: none;
         }
-
+       
         .footer-column ul li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
-
+       
         .footer-column a {
             color: rgba(255,255,255,0.7);
             text-decoration: none;
             transition: color 0.3s;
         }
-
+       
         .footer-column a:hover {
             color: white;
+            padding-left: 5px;
         }
-
+        
+        .footer-column p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+       
         .copyright {
             text-align: center;
-            padding-top: 20px;
+            padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: rgba(255,255,255,0.7);
+            font-size: 14px;
         }
-
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+       
         /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 100%;
+                padding: 0 40px;
+            }
+            
+            .slider-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            
+            .arrow-left {
+                left: 0;
+            }
+            
+            .arrow-right {
+                right: 0;
+            }
+        }
+        
         @media (max-width: 992px) {
             .features {
                 grid-template-columns: 1fr;
             }
-
-            .video-grid {
+           
+            .video-grid, .industry-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
+            
             .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
-
+            
             .experts-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .industry-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-container {
+           
+            .contact-container, .footer-container {
                 grid-template-columns: 1fr;
             }
-
+            
             .footer-container {
-                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
             }
         }
-
+       
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-
+           
             .hero h1 {
                 font-size: 36px;
             }
-
-            .video-grid {
+            
+            .company-name {
+                font-size: 24px;
+            }
+           
+            .video-grid, .gallery-grid {
                 grid-template-columns: 1fr;
             }
-
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
+            
             .experts-grid {
                 grid-template-columns: 1fr;
             }
-
-            .industry-grid {
-                grid-template-columns: 1fr;
+            
+            .product-card {
+                min-width: 300px;
             }
-
-            .footer-container {
-                grid-template-columns: 1fr;
+            
+            .slider-arrow {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
             }
         }
-
-        @media (max-width: 480px) {
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero h1 {
+                font-size: 30px;
+            }
+            
+            .company-name {
+                font-size: 20px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero-buttons a {
+                width: 100%;
+            }
+            
             .gallery-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            .product-card {
+                min-width: 280px;
             }
         }
     </style>
@@ -620,6 +887,7 @@
             <nav>
                 <div class="logo">
                     <img src="https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/Screenshot%202025-08-15%20234316.png" alt="WILLPACK Logo">
+                    WILLPACK
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -635,20 +903,18 @@
             </nav>
         </div>
     </header>
+    
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>WILLPACK AUTOMATION LLP</h1>
-                <p>Precision in every label, power in every move.<br><strong>Over 15 years</strong> of expertise in designing high-performance labeling machines for diverse industries.</p>
-                <div class="hero-buttons">
-                    <a href="#products" class="cta-button">Explore Machines</a>
-                    <a href="#contact" class="cta-button" style="background-color: transparent; border: 2px solid white;">Request Demo</a>
-                    <a href="#about" class="cta-button" style="background-color: var(--primary);">Learn More</a>
-                </div>
+                <h1>Innovative Labeling Solutions for Your Business</h1>
+                <p class="subtitle">Precision in every label, power in every move.</p>
+                <span class="company-name">WILLPACK AUTOMATION LLP</span>
             </div>
         </div>
     </section>
+    
     <!-- Why Choose Us -->
     <section class="why-choose" id="about">
         <div class="container">
@@ -657,115 +923,88 @@
             </div>
             <div class="features">
                 <div class="feature-card">
-                    <div class="feature-icon">✓</div>
-                    <h3>Quality Assurance</h3>
-                    <p>Stringent quality control standards to meet the highest industry benchmarks.</p>
+                    <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>17 States Reached</h3>
+                    <p>Our labeling solutions are trusted by businesses across 17 states in India.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI-Powered Future</h3>
-                    <p>Embracing AI to revolutionize labeling with smart automation and precision.</p>
+                    <div class="feature-icon"><i class="fas fa-building"></i></div>
+                    <h3>234 Companies Served</h3>
+                    <p>We've successfully delivered labeling solutions to 234 companies across industries.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Innovation</h3>
-                    <p>Continuous R&D to deliver cutting-edge labeling solutions.</p>
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated service engineers provide support within 24 hours of request.</p>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- AI Section -->
+    <section class="ai-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our AI Development</h2>
+            </div>
+            <div class="ai-content">
+                <p>We are currently working on AI integration to make labeling processes even more efficient and production-friendly. Our upcoming AI solutions will bring automation to the next level for easy and increased production capabilities.</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- Products Preview -->
     <section class="products-preview" id="products">
         <div class="container">
             <div class="section-title">
                 <h2>Our Labeling Machines</h2>
             </div>
-            <div class="product-slider-container">
-                <div class="product-slider" id="productSlider">
+            <div class="slider-container">
+                <button class="slider-arrow arrow-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-arrow arrow-right"><i class="fas fa-chevron-right"></i></button>
+                
+                <div class="product-slider">
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/Screenshot%202025-08-15%20234316.png');"></div>
                         <div class="product-info">
                             <h3>Wraparound Labeling Machine</h3>
-                            <ul>
-                                <li>Speed: 60-180 BPM</li>
-                                <li>Label Dimensions: 25x25mm to 250x250mm</li>
-                                <li>Materials: Paper/Film/PP/PE</li>
-                            </ul>
-                            <a href="#" class="cta-button">View Details</a>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/Screenshot%202025-08-15%20234316.png');"></div>
                         <div class="product-info">
                             <h3>Front & Back Labeling Machine</h3>
-                            <ul>
-                                <li>Speed: 60-300 BPM</li>
-                                <li>Label Dimensions: 25x25mm to 250x250mm</li>
-                                <li>Materials: Paper/Film/PP/PE</li>
-                            </ul>
-                            <a href="#" class="cta-button">View Details</a>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/Screenshot%202025-08-15%20234316.png');"></div>
                         <div class="product-info">
                             <h3>Tamper Evident Labeling Machine</h3>
-                            <ul>
-                                <li>Speed: 100-300 BPM</li>
-                                <li>Label Dimensions: 15x25mm to 20x75mm</li>
-                                <li>Special 'L' seal for mono cartons</li>
-                            </ul>
-                            <a href="#" class="cta-button">View Details</a>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/Screenshot%202025-08-15%20234316.png');"></div>
                         <div class="product-info">
                             <h3>Pouch Labeling Machine</h3>
-                            <ul>
-                                <li>Speed: 80-200 BPM</li>
-                                <li>Label Dimensions: 20x30mm to 150x200mm</li>
-                                <li>Works with all pouch types</li>
-                            </ul>
-                            <a href="#" class="cta-button">View Details</a>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/Screenshot%202025-08-15%20234316.png');"></div>
                         <div class="product-info">
                             <h3>Semi-Automatic Labeling Machine</h3>
-                            <ul>
-                                <li>Speed: 30-60 BPM</li>
-                                <li>Label Dimensions: 20x20mm to 200x200mm</li>
-                                <li>Ideal for small batch production</li>
-                            </ul>
-                            <a href="#" class="cta-button">View Details</a>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/Screenshot%202025-08-15%20234316.png');"></div>
                         <div class="product-info">
                             <h3>Top & Bottom Labeling Machine</h3>
-                            <ul>
-                                <li>Speed: 50-150 BPM</li>
-                                <li>Label Dimensions: 25x25mm to 150x150mm</li>
-                                <li>Simultaneous top and bottom labeling</li>
-                            </ul>
-                            <a href="#" class="cta-button">View Details</a>
                         </div>
                     </div>
                 </div>
-                <div class="slider-nav">
-                    <button onclick="scrollSlider('left')">&#8249;</button>
-                    <button onclick="scrollSlider('right')">&#8250;</button>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="#contact" class="cta-button">Contact Us</a>
             </div>
         </div>
     </section>
-
+    
     <!-- Photo Gallery -->
     <section class="photo-gallery" id="gallery">
         <div class="container">
@@ -774,71 +1013,72 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Machine 1 in operation">
+                    <img src="https://via.placeholder.com/600x400" alt="Machine 1 in operation">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Machine 2 in operation">
+                    <img src="https://via.placeholder.com/600x400" alt="Machine 2 in operation">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Machine 3 in operation">
+                    <img src="https://via.placeholder.com/600x400" alt="Machine 3 in operation">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Machine 4 in operation">
+                    <img src="https://via.placeholder.com/600x400" alt="Machine 4 in operation">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/Substring not found300x200" alt="Factory setup">
+                    <img src="https://via.placeholder.com/600x400" alt="Factory setup">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Team working">
+                    <img src="https://via.placeholder.com/600x400" alt="Team working">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Client installation">
+                    <img src="https://via.placeholder.com/600x400" alt="Client installation">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Quality check">
+                    <img src="https://via.placeholder.com/600x400" alt="Quality check">
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Experts Section -->
     <section class="experts" id="experts">
         <div class="container">
             <div class="section-title">
-                <h2>Our Experts</h2>
+                <h2>Our Expert Team</h2>
             </div>
             <div class="experts-grid">
                 <div class="expert-card">
-                    <img src="https://via.placeholder.com/150" alt="Expert 1" class="expert-photo">
+                    <img src="https://via.placeholder.com/150" alt="Bimal Patel" class="expert-photo">
                     <h3>Bimal Patel</h3>
                     <p class="expert-position">Founder & CEO</p>
-                    <p><strong>15+ years</strong> experience in labeling technology and automation solutions.</p>
+                    <p>Visionary leader with 15+ years experience in labeling technology and automation solutions.</p>
+                    <div class="experience-badge">15+ Years Experience</div>
                 </div>
                 <div class="expert-card">
-                    <img src="A syntax error occurred. Please check the code and try again." alt="Expert 2" class="expert-photo">
+                    <img src="https://via.placeholder.com/150" alt="Rajesh Sharma" class="expert-photo">
                     <h3>Rajesh Sharma</h3>
                     <p class="expert-position">Technical Director</p>
-                    <p>Expert in machine design and manufacturing processes.</p>
+                    <p>Expert in machine design and manufacturing processes with 12+ years in automation.</p>
+                    <div class="experience-badge">12+ Years Experience</div>
                 </div>
                 <div class="expert-card">
-                    <img src="https://via.placeholder.com/150" alt="Expert 3" class="expert-photo">
+                    <img src="https://via.placeholder.com/150" alt="Priya Desai" class="expert-photo">
                     <h3>Priya Desai</h3>
                     <p class="expert-position">Quality Control Head</p>
-                    <p>Ensures all machines meet international quality standards.</p>
+                    <p>Ensures all machines meet international quality standards with rigorous testing protocols.</p>
+                    <div class="experience-badge">10+ Years Experience</div>
                 </div>
                 <div class="expert-card">
-                    <img src="https://via.placeholder.com/150" alt="Expert 4" class="expert-photo">
-                    <h3>Vik.ALIGNMENT ISSUES DETECTED IN EXPERT SECTION
-Expert Vikram Singh's description is misaligned and not centered properly. Please check the CSS for the .expert-card class and ensure consistent alignment across all expert cards. Ensure the text is centered and the image is properly scaled. Correct any padding or margin issues that may cause the misalignment.
-
-ram Singh</h3>
+                    <img src="https://via.placeholder.com/150" alt="Vikram Singh" class="expert-photo">
+                    <h3>Vikram Singh</h3>
                     <p class="expert-position">Service Manager</p>
-                    <p>Leads our after-sales support and maintenance team.</p>
+                    <p>Leads our after-sales support and maintenance team with 24/7 availability.</p>
+                    <div class="experience-badge">8+ Years Experience</div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Video Showcase -->
     <section class="video-showcase" id="videos">
         <div class="container">
@@ -850,7 +1090,7 @@ ram Singh</h3>
                 <div>
                     <div class="video-item">
                         <video controls>
-                            <source src="main_video.mp4" type="video/mp4">
+                            <source src="https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/main_video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -860,12 +1100,12 @@ ram Singh</h3>
                         <p>Precision application with minimal label wastage</p>
                     </div>
                 </div>
-
+                
                 <!-- Video 2 -->
                 <div>
                     <div class="video-item">
                         <video controls>
-                            <source src="WhatsApp%20Video%202025-08-14%20at%2013.50.32_b47b5b28.mp4" type="video/mp4">
+                            <source src="https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/WhatsApp%20Video%202025-08-14%20at%2013.50.32_b47b5b28.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -875,12 +1115,12 @@ ram Singh</h3>
                         <p>Adjustable for various container sizes</p>
                     </div>
                 </div>
-
+                
                 <!-- Video 3 -->
                 <div>
                     <div class="video-item">
                         <video controls>
-                            <source src="main_video.mp4" type="video/mp4">
+                            <source src="https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/main_video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -890,12 +1130,12 @@ ram Singh</h3>
                         <p>Ideal for pharmaceutical and FMCG industries</p>
                     </div>
                 </div>
-
+                
                 <!-- Video 4 -->
                 <div>
                     <div class="video-item">
                         <video controls>
-                            <source src="WhatsApp%20Video%202025-08-14%20at%2013.50.32_b47b5b28.mp4" type="video/mp4">
+                            <source src="https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/WhatsApp%20Video%202025-08-14%20at%2013.50.32_b47b5b28.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -905,12 +1145,12 @@ ram Singh</h3>
                         <p>Variable speed control for different materials</p>
                     </div>
                 </div>
-
+                
                 <!-- Video 5 -->
                 <div>
                     <div class="video-item">
                         <video controls>
-                            <source src="main_video.mp4" type="video/mp4">
+                            <source src="https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/main_video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -920,25 +1160,25 @@ ram Singh</h3>
                         <p>Easy to operate with minimal training</p>
                     </div>
                 </div>
-
+                
                 <!-- Video 6 -->
                 <div>
                     <div class="video-item">
                         <video controls>
-                            <source src="WhatsApp%20Video%202025-08-14%20at%2013.50.32_b47b5b28.mp4" type="video/mp4">
+                            <source src="https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/WhatsApp%20Video%202025-08-14%20at%2013.50.32_b47b5b28.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="video-caption">
                         <h4>Top & Bottom Labeling</h4>
                         <p>Simultaneous top and bottom application</p>
-                        <p>High precision for alignment</p>
+                        <p>High precision for perfect alignment</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Industries -->
     <section class="industries" id="industries">
         <div class="container">
@@ -981,7 +1221,7 @@ ram Singh</h3>
             </div>
         </div>
     </section>
-
+    
     <!-- Contact -->
     <section class="contact" id="contact">
         <div class="container">
@@ -992,39 +1232,51 @@ ram Singh</h3>
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
                     <div class="contact-details">
-                        <p><i>📍</i> Unit No 6, Rajshree Industrial Complex, Manpada, Thane West - 400607</p>
-                        <p><i>📞</i> +91 9004996090</p>
-                        <p><i>✉️</i> info@willpackautomation.com</p>
-                        <p><i>🌐</i> www.willpackautomation.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Unit No 6, Rajshree Industrial Complex, Manpada, Thane West - 400607</p>
+                        <p><i class="fas fa-phone-alt"></i> +91 9004996090</p>
+                        <p><i class="fas fa-envelope"></i> info@willpackautomation.com</p>
+                        <p><i class="fas fa-globe"></i> www.willpackautomation.com</p>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/company/willpack-automation-llp/">LinkedIn</a>
+                        <a href="https://www.linkedin.com/company/willpack-automation-llp/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="sales-contact">
                     <h3>Sales & Service Contact</h3>
                     <div class="sales-person">
-                        <img src="https://via.placeholder.com/80" alt="Prasanta Patro" class="sales-photo">
+                        <img src="https://via.placeholder.com/150" alt="Prasanta Patro" class="sales-photo">
                         <div class="sales-info">
                             <h4>Prasanta Patro</h4>
                             <p>Sales & Service Engineer</p>
-                            <p><i>📞</i> +91 9699601388</p>
-                            <p><i>✉️</i> prasanta@willpackautomation.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +91 9699601388</p>
+                            <p><i class="fas fa-envelope"></i> prasanta@willpackautomation.com</p>
                         </div>
                     </div>
-                    <p>For any sales inquiries, service requests, or technical support, please contact our dedicated sales and service engineer.</p>
+                    
+                    <div class="sales-person">
+                        <div class="sales-info">
+                            <h4>Technical Support</h4>
+                            <p>24/7 Customer Support</p>
+                            <p><i class="fas fa-phone-alt"></i> +91 9004996090 (Ext. 2)</p>
+                            <p><i class="fas fa-envelope"></i> support@willpackautomation.com</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
                 <div class="footer-column">
-                    <h3>WILLPACK AUTOMATION LLP</h3>
-                    <p><strong>Over 15 years</strong> of innovative labeling solutions, helping businesses streamline their labeling processes.</p>
+                    <div class="footer-logo">
+                        <img src="https://raw.githubusercontent.com/bimal-bp/WiLL_Pack_Company/main/Screenshot%202025-08-15%20234316.png" alt="WILLPACK Logo" style="width: 50px; height: 50px; border-radius: 50%;">
+                        WILLPACK
+                    </div>
+                    <p>Innovative labeling solutions for 15+ years, helping businesses streamline their labeling processes with precision and efficiency.</p>
+                    <p>Precision in every label, power in every move.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
@@ -1045,34 +1297,78 @@ ram Singh</h3>
                         <li><a href="#">Tamper Evident</a></li>
                         <li><a href="#">Pouch Labeling</a></li>
                         <li><a href="#">Semi-Automatic</a></li>
+                        <li><a href="#">Top-Bottom Labeling</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Contact</h3>
                     <ul>
-                        <li>Thane West, Mumbai</li>
-                        <li>+91 9004996090</li>
-                        <li>info@willpackautomation.com</li>
-                        <li><a href="https://www.linkedin.com/company/willpack-automation-llp/">LinkedIn</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Thane West, Mumbai</li>
+                        <li><i class="fas fa-phone-alt"></i> +91 9004996090</li>
+                        <li><i class="fas fa-envelope"></i> info@willpackautomation.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 WILLPACK Automation LLP. All Rights Reserved.</p>
+                <p>&copy; 2025 WILLPACK Automation LLP. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: #ff6b00;"></i> by WILLPACK Team</p>
             </div>
         </div>
     </footer>
-
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+    
     <script>
-        function scrollSlider(direction) {
-            const slider = document.getElementById('productSlider');
-            const scrollAmount = 320; // Adjust based on card width + gap
-            if (direction === 'left') {
-                slider.scrollLeft -= scrollAmount;
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('active');
             } else {
-                slider.scrollLeft += scrollAmount;
+                backToTopButton.classList.remove('active');
             }
-        }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Product Slider Navigation
+        const productSlider = document.querySelector('.product-slider');
+        const arrowLeft = document.querySelector('.arrow-left');
+        const arrowRight = document.querySelector('.arrow-right');
+        
+        arrowLeft.addEventListener('click', () => {
+            productSlider.scrollBy({ left: -350, behavior: 'smooth' });
+        });
+        
+        arrowRight.addEventListener('click', () => {
+            productSlider.scrollBy({ left: 350, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
