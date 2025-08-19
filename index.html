@@ -157,11 +157,27 @@
        
         .company-name {
             display: block;
-            font-size: 54.6px; /* 30% larger than original 42px */
+            font-size: 54.6px;
             color: var(--accent);
             margin-bottom: 20px;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: superAction 2s infinite alternate;
+        }
+
+        @keyframes superAction {
+            0% {
+                transform: scale(1);
+                text-shadow: 0 0 10px rgba(255, 107, 0, 0.7);
+            }
+            50% {
+                transform: scale(1.05);
+                text-shadow: 0 0 20px rgba(255, 107, 0, 0.9), 0 0 30px rgba(255, 107, 0, 0.5);
+            }
+            100% {
+                transform: scale(1);
+                text-shadow: 0 0 10px rgba(255, 107, 0, 0.7);
+            }
         }
       
         .hero-buttons {
@@ -334,9 +350,13 @@
       
         .product-image {
             height: 250px;
-            background-color: #ddd;
-            background-size: cover;
+            background-color: #f0f0f0;
+            background-size: contain;
             background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
       
         .product-info {
@@ -823,7 +843,7 @@
             }
             
             .company-name {
-                font-size: 42px; /* Adjusted for smaller screens */
+                font-size: 42px;
             }
         }
       
@@ -837,7 +857,7 @@
             }
            
             .company-name {
-                font-size: 36px; /* Adjusted for smaller screens */
+                font-size: 36px;
             }
           
             .video-grid, .gallery-grid {
@@ -869,7 +889,7 @@
             }
            
             .company-name {
-                font-size: 30px; /* Adjusted for smaller screens */
+                font-size: 30px;
             }
            
             .hero-buttons {
@@ -977,7 +997,7 @@
               
                 <div class="product-slider">
                     <div class="product-card">
-                        <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/WillpackPrasanta/WILLPack_Automation/main/Screenshot%202025-08-15%20234316.png');"></div>
+                        <div class="product-image" style="background-image: url('https://via.placeholder.com/350x250?text=Wraparound+Machine');"></div>
                         <div class="product-info">
                             <h3>Wraparound Labeling Machine</h3>
                             <ul>
@@ -986,10 +1006,11 @@
                                 <li>Materials: Paper/Film/PP/PE</li>
                                 <li>Container Types: Round, oval, flat surfaces</li>
                             </ul>
+                            <a href="#contact" class="cta-button" style="display: inline-block; margin-top: 10px;">Inquire Now</a>
                         </div>
                     </div>
                     <div class="product-card">
-                        <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/WillpackPrasanta/WILLPack_Automation/main/Screenshot%202025-08-15%20234316.png');"></div>
+                        <div class="product-image" style="background-image: url('https://via.placeholder.com/350x250?text=Front+Back+Machine');"></div>
                         <div class="product-info">
                             <h3>Front & Back Labeling Machine</h3>
                             <ul>
@@ -998,10 +1019,11 @@
                                 <li>Materials: Paper/Film/PP/PE</li>
                                 <li>Simultaneous dual-side labeling</li>
                             </ul>
+                            <a href="#contact" class="cta-button" style="display: inline-block; margin-top: 10px;">Inquire Now</a>
                         </div>
                     </div>
                     <div class="product-card">
-                        <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/WillpackPrasanta/WILLPack_Automation/main/Screenshot%202025-08-15%20234316.png');"></div>
+                        <div class="product-image" style="background-image: url('https://via.placeholder.com/350x250?text=Tamper+Evident');"></div>
                         <div class="product-info">
                             <h3>Tamper Evident Labeling Machine</h3>
                             <ul>
@@ -1010,10 +1032,11 @@
                                 <li>Special 'L' seal for mono cartons</li>
                                 <li>Pharmaceutical-grade security</li>
                             </ul>
+                            <a href="#contact" class="cta-button" style="display: inline-block; margin-top: 10px;">Inquire Now</a>
                         </div>
                     </div>
                     <div class="product-card">
-                        <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/WillpackPrasanta/WILLPack_Automation/main/Screenshot%202025-08-15%20234316.png');"></div>
+                        <div class="product-image" style="background-image: url('https://via.placeholder.com/350x250?text=Pouch+Labeling');"></div>
                         <div class="product-info">
                             <h3>Pouch Labeling Machine</h3>
                             <ul>
@@ -1022,10 +1045,11 @@
                                 <li>Works with all pouch types</li>
                                 <li>Adjustable for various pouch sizes</li>
                             </ul>
+                            <a href="#contact" class="cta-button" style="display: inline-block; margin-top: 10px;">Inquire Now</a>
                         </div>
                     </div>
                     <div class="product-card">
-                        <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/WillpackPrasanta/WILLPack_Automation/main/Screenshot%202025-08-15%20234316.png');"></div>
+                        <div class="product-image" style="background-image: url('https://via.placeholder.com/350x250?text=Semi-Automatic');"></div>
                         <div class="product-info">
                             <h3>Semi-Automatic Labeling Machine</h3>
                             <ul>
@@ -1034,10 +1058,11 @@
                                 <li>Ideal for small batch production</li>
                                 <li>Easy operation with minimal training</li>
                             </ul>
+                            <a href="#contact" class="cta-button" style="display: inline-block; margin-top: 10px;">Inquire Now</a>
                         </div>
                     </div>
                     <div class="product-card">
-                        <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/WillpackPrasanta/WILLPack_Automation/main/Screenshot%202025-08-15%20234316.png');"></div>
+                        <div class="product-image" style="background-image: url('https://via.placeholder.com/350x250?text=Top+Bottom');"></div>
                         <div class="product-info">
                             <h3>Top & Bottom Labeling Machine</h3>
                             <ul>
@@ -1046,6 +1071,7 @@
                                 <li>Simultaneous top and bottom labeling</li>
                                 <li>Precision alignment system</li>
                             </ul>
+                            <a href="#contact" class="cta-button" style="display: inline-block; margin-top: 10px;">Inquire Now</a>
                         </div>
                     </div>
                 </div>
@@ -1061,28 +1087,28 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="img1.jpg" alt="Machine 1 in operation">
+                    <img src="https://via.placeholder.com/500x300?text=Machine+1" alt="Machine 1 in operation">
                 </div>
                 <div class="gallery-item">
-                    <img src="img2.jpg" alt="Machine 2 in operation">
+                    <img src="https://via.placeholder.com/500x300?text=Machine+2" alt="Machine 2 in operation">
                 </div>
                 <div class="gallery-item">
-                    <img src="img3.jpg" alt="Machine 3 in operation">
+                    <img src="https://via.placeholder.com/500x300?text=Machine+3" alt="Machine 3 in operation">
                 </div>
                 <div class="gallery-item">
-                    <img src="img4.jpg" alt="Machine 4 in operation">
+                    <img src="https://via.placeholder.com/500x300?text=Machine+4" alt="Machine 4 in operation">
                 </div>
                 <div class="gallery-item">
-                    <img src="img5.jpg" alt="Factory setup">
+                    <img src="https://via.placeholder.com/500x300?text=Factory+Setup" alt="Factory setup">
                 </div>
                 <div class="gallery-item">
-                    <img src="img6.jpg" alt="Team working">
+                    <img src="https://via.placeholder.com/500x300?text=Team+Working" alt="Team working">
                 </div>
                 <div class="gallery-item">
-                    <img src="img7.jpg" alt="Client installation">
+                    <img src="https://via.placeholder.com/500x300?text=Client+Installation" alt="Client installation">
                 </div>
                 <div class="gallery-item">
-                    <img src="img8.jpg" alt="Quality check">
+                    <img src="https://via.placeholder.com/500x300?text=Quality+Check" alt="Quality check">
                 </div>
             </div>
         </div>
@@ -1208,18 +1234,18 @@
                         <p>Hygienic and precise application</p>
                     </div>
                 </div>
-                <!-- Video 6 - Pickel Video -->
+                <!-- Video 6 - Pickle Video -->
                 <div>
                     <div class="video-item">
                         <video controls>
-                            <source src="https://github.com/WillpackPrasanta/WILLPack_Automation/blob/main/Pickel_lebel_machine.mp4" type="video/mp4">
+                            <source src="https://github.com/WillpackPrasanta/WILLPack_Automation/raw/main/Pickel_lebel_machine.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="video-caption">
-                        <h4>Food Product Labeling</h4>
-                        <p>Specialized labeling for food containers</p>
-                        <p>Hygienic and precise application</p>
+                        <h4>Pickle Packaging Labeling</h4>
+                        <p>Specialized labeling for pickle jars</p>
+                        <p>Food-grade precision application</p>
                     </div>
                 </div>
             </div>
@@ -1262,8 +1288,8 @@
                     <h3>Spare Parts</h3>
                 </div>
                 <div class="industry-card">
-                    <div class="industry-icon"><i class="fas fa-bottle-droplet"></i></div>
-                    <h3>Edible Oil</h3>
+                    <div class="industry-icon"><i class="fas fa-oil-can"></i></div>
+                    <h3>Crude Oil</h3>
                 </div>
             </div>
         </div>
